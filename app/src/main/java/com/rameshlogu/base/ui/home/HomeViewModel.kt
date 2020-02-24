@@ -10,4 +10,8 @@ class HomeViewModel : ViewModel() {
         value = "This is home Fragment"
     }
     val text: LiveData<String> = _text
+
+    fun changeText(someLogic: Boolean) {
+        _text.value = if (someLogic) "This is home" else "This is home view"
+    }
 }
